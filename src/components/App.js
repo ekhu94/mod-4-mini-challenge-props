@@ -70,15 +70,14 @@ const spices = [
 ]
 
 // function component
-function App() {
-  console.log("Spices:", spices)
+const App = () => {
 
   // TODO: pass down props to the components below using the array of spices
   // What props do each of these components expect?
   return (
     <>
-      <Header />
-      <SpiceList />
+      <Header spiceCount={spices.length} />
+      <SpiceList spices={spices} />
     </>
   );
 }
